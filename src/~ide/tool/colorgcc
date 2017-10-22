@@ -141,8 +141,8 @@ sub initDefaults
     $compilerPaths{"f77"} = "/usr/bin/g77";
     $compilerPaths{"gcj"} = "/usr/bin/gcj";
     # cross-platform GCC targeting 32bit Windows
-    $compilerPaths{"i686-w64-mingw32-gcc"} = "/usr/bin/i686-w64-mingw32-gcc";
-    $compilerPaths{"i686-w64-mingw32-g++"} = "/usr/bin/i686-w64-mingw32-g++";
+    $compilerPaths{"gcc -m32"} = "/usr/bin/gcc -m32";
+    $compilerPaths{"g++ -m32"} = "/usr/bin/g++ -m32";
     $compilerPaths{"i686-w64-mingw32-c++"} = "/usr/bin/i686-w64-mingw32-c++";
     # cross-platform GCC targeting 64bit Windows
     $compilerPaths{"x86_64-w64-mingw32-gcc"} = "/usr/bin/x86_64-w64-mingw32-gcc";

@@ -474,7 +474,7 @@ static void InjectClockHook(HWND hwnd) {
 	static DWORD s_restart_ticks = 0;
 	static int s_restart_num = 0;
 	DWORD ticks = GetTickCount();
-	if(ticks - s_restart_ticks < 30000){
+	if(ticks - s_restart_ticks < 2300){
 		if(++s_restart_num >= 3){
 			if(api.Message(0,
 					L"Multiple Explorer crashes or restarts detected\n"

@@ -5,11 +5,11 @@
 
 WORKDIR = `pwd`
 
-CC = $(CCACHE) i686-w64-mingw32-gcc
-CXX = $(CCACHE) i686-w64-mingw32-g++
+CC = $(CCACHE) gcc -m32
+CXX = $(CCACHE) g++ -m32
 AR = i686-w64-mingw32-ar
-LD = i686-w64-mingw32-g++
-WINDRES = i686-w64-mingw32-windres
+LD = g++ -m32
+WINDRES = windres -F pe-i386
 
 INC = 
 CFLAGS = -D_UNICODE -DUNICODE -fno-ident -Wall -std=c99 -fvisibility=hidden -D_POSIX=1 -D_POSIX_C_SOURCE=200112L -D__STDC_FORMAT_MACROS -D__USE_MINGW_ANSI_STDIO=0 -D__MINGW_USE_VC2005_COMPAT -DWINVER=0x0501 -DPSAPI_VERSION=1 -DWIN2K_COMPAT

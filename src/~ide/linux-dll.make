@@ -5,11 +5,11 @@
 
 WORKDIR = `pwd`
 
-CC0 = $(CCACHE) i686-w64-mingw32-gcc
-CXX0 = $(CCACHE) i686-w64-mingw32-g++
+CC0 = $(CCACHE) gcc -m32
+CXX0 = $(CCACHE) g++ -m32
 AR0 = i686-w64-mingw32-ar
-LD0 = i686-w64-mingw32-g++
-WINDRES0 = i686-w64-mingw32-windres
+LD0 = g++ -m32
+WINDRES0 = windres -F pe-i386
 
 INC0 = 
 CFLAGS0 = -D_UNICODE -DUNICODE -fno-ident -Wall -std=c99 -fvisibility=hidden -D_POSIX=1 -D_POSIX_C_SOURCE=200112L -D__STDC_FORMAT_MACROS -D__USE_MINGW_ANSI_STDIO=0 -D__MINGW_USE_VC2005_COMPAT -DWINVER=0x0501 -DPSAPI_VERSION=1 -DWIN2K_COMPAT
@@ -22,7 +22,7 @@ CC1 = $(CCACHE) x86_64-w64-mingw32-gcc
 CXX1 = $(CCACHE) x86_64-w64-mingw32-g++
 AR1 = x86_64-w64-mingw32-ar
 LD1 = x86_64-w64-mingw32-g++
-WINDRES1 = x86_64-w64-mingw32-windres
+WINDRES1 = windres
 
 INC1 = 
 CFLAGS1 = -D_UNICODE -DUNICODE -fno-ident -Wall -std=c99 -fvisibility=hidden -D_POSIX=1 -D_POSIX_C_SOURCE=200112L -D__STDC_FORMAT_MACROS -D__USE_MINGW_ANSI_STDIO=0 -D__MINGW_USE_VC2005_COMPAT -DWINVER=0x0501 -DPSAPI_VERSION=1 -DWIN2K_COMPAT
